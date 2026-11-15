@@ -17,7 +17,7 @@ fi
 name="webnak_${os}_${arch}"
 base="https://github.com/$REPO/releases/download/$tag"
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
-echo "Downloading webnak $tag for $os/$arch…"
+echo "Downloading webnak ${tag} for ${os}/${arch}..."
 curl -fsSL "$base/$name" -o "$tmp/webnak"
 curl -fsSL "$base/checksums.txt" -o "$tmp/checksums.txt"
 want=$(awk -v f="$name" '$2==f{print $1}' "$tmp/checksums.txt")
