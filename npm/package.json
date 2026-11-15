@@ -1,6 +1,6 @@
 {
   "name": "webnak",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Host and edit websites with Webnak from your terminal, or from AI agents like Claude Code (MCP server included).",
   "keywords": ["webnak", "web hosting", "website", "static site", "deploy", "cli", "mcp", "claude", "claude-code", "website editor"],
   "homepage": "https://webnak.dev",
