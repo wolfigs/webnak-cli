@@ -11,9 +11,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sathninduk/webnak-cli/internal/api"
-	"github.com/sathninduk/webnak-cli/internal/config"
-	"github.com/sathninduk/webnak-cli/internal/ui"
+	"github.com/wolfigs/webnak-cli/internal/api"
+	"github.com/wolfigs/webnak-cli/internal/config"
+	"github.com/wolfigs/webnak-cli/internal/ui"
 )
 
 // Version is set at build time.

@@ -16,8 +16,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sathninduk/webnak-cli/internal/api"
-	"github.com/sathninduk/webnak-cli/internal/ui"
+	"github.com/wolfigs/webnak-cli/internal/api"
+	"github.com/wolfigs/webnak-cli/internal/ui"
 )
 
 // Hosting is a hosted site's state.

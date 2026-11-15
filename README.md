@@ -16,10 +16,10 @@ npx @wolfigs/webnak-cli deploy ./dist --create --name "My app"
 | | |
 |---|---|
 | npm (any OS) | `npm i -g @wolfigs/webnak-cli` or run with `npx @wolfigs/webnak-cli` |
-| macOS / Linux | `curl -fsSL https://raw.githubusercontent.com/sathninduk/webnak-cli/main/install.sh \| sh` |
-| Windows (PowerShell) | `irm https://raw.githubusercontent.com/sathninduk/webnak-cli/main/install.ps1 \| iex` |
-| Homebrew | `brew tap sathninduk/webnak https://github.com/sathninduk/webnak-cli && brew install webnak` |
-| Binaries | [Releases](https://github.com/sathninduk/webnak-cli/releases) (checksums in `checksums.txt`) |
+| macOS / Linux | `curl -fsSL https://raw.githubusercontent.com/wolfigs/webnak-cli/main/install.sh \| sh` |
+| Windows (PowerShell) | `irm https://raw.githubusercontent.com/wolfigs/webnak-cli/main/install.ps1 \| iex` |
+| Homebrew | `brew tap wolfigs/webnak https://github.com/wolfigs/webnak-cli && brew install webnak` |
+| Binaries | [Releases](https://github.com/wolfigs/webnak-cli/releases) (checksums in `checksums.txt`) |
 
 ## Sign in
 
@@ -105,7 +105,7 @@ Or install the plugin, which adds the MCP server and a skill that teaches Claude
 the whole workflow (sign in, templates, deploys, content, domains):
 
 ```
-/plugin marketplace add sathninduk/webnak-cli
+/plugin marketplace add wolfigs/webnak-cli
 /plugin install webnak@webnak
 ```
 

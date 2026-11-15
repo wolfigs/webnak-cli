@@ -10,8 +10,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sathninduk/webnak-cli/internal/api"
-	"github.com/sathninduk/webnak-cli/internal/ui"
+	"github.com/wolfigs/webnak-cli/internal/api"
+	"github.com/wolfigs/webnak-cli/internal/ui"
 )
 
 func sitePath(id, rest string) string { return "/api/v1/webnak/sites/" + api.Path(id) + rest }

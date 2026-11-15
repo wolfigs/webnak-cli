@@ -14,7 +14,7 @@ const crypto = require("crypto");
 const { spawn } = require("child_process");
 
 const VERSION = require("../package.json").version;
-const REPO = "sathninduk/webnak-cli";
+const REPO = "wolfigs/webnak-cli";
 
 function target() {
   const plat = { darwin: "darwin", linux: "linux", win32: "windows" }[process.platform];

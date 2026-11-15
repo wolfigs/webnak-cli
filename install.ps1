@@ -1,8 +1,8 @@
 # Installs the Webnak CLI on Windows.
-#   irm https://raw.githubusercontent.com/sathninduk/webnak-cli/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/wolfigs/webnak-cli/main/install.ps1 | iex
 # Set $env:WEBNAK_VERSION to pin a version.
 $ErrorActionPreference = "Stop"
-$repo = "sathninduk/webnak-cli"
+$repo = "wolfigs/webnak-cli"
 $arch = if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") { "arm64" } else { "amd64" }
 if ($env:WEBNAK_VERSION) { $tag = "v" + $env:WEBNAK_VERSION.TrimStart("v") }
 else { $tag = (Invoke-RestMethod "https://api.github.com/repos/$repo/releases/latest").tag_name }

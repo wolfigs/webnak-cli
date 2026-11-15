@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/sathninduk/webnak-cli/internal/api"
+	"github.com/wolfigs/webnak-cli/internal/api"
 )
 
 var errNotFound = errors.New("not found")

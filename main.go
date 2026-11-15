@@ -4,7 +4,7 @@ package main
 import (
 	"os"
 
-	"github.com/sathninduk/webnak-cli/cmd"
+	"github.com/wolfigs/webnak-cli/cmd"
 )
 
 var version = "dev"

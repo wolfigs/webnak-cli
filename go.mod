@@ -1,4 +1,4 @@
-module github.com/sathninduk/webnak-cli
+module github.com/wolfigs/webnak-cli
 
 go 1.26.0
 
