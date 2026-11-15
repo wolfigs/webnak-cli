@@ -1,7 +1,7 @@
 {
   "name": "webnak",
   "description": "Host and edit websites with Webnak: create sites from templates, deploy folders or GitHub repositories to name.webnak.site, change content, connect custom domains. Includes the Webnak MCP server and a skill for the workflow.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "Wolfigs",
     "url": "https://webnak.dev"
