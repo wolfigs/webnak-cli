@@ -17,3 +17,8 @@ jobs:
       - run: go vet ./...
       - run: go test ./...
       - run: go build -o webnak-ci .
+      - name: Versions agree (npm package, plugin, MCP pin)
+        shell: bash
+        run: |
+          v=$(python3 -c "import json;print(json.load(open('npm/package.json'))['version'])")
+          python3 -c "import json,sys;v='$v';p=json.load(open('.claude-plugin/plugin.json'))['version'];m=json.load(open('.mcp.json'))['webnak']['args'];assert p==v,('plugin.json',p,v);assert f'@wolfigs/webnak-cli@{v}' in m,('mcp pin',m,v)"

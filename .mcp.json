@@ -1,6 +1,10 @@
 {
   "webnak": {
     "command": "npx",
-    "args": ["-y", "@wolfigs/webnak-cli@latest", "mcp"]
+    "args": [
+      "-y",
+      "@wolfigs/webnak-cli@0.1.5",
+      "mcp"
+    ]
   }
 }

@@ -1,7 +1,8 @@
 {
   "name": "webnak",
+  "displayName": "Webnak",
+  "version": "0.1.5",
   "description": "Host and edit websites with Webnak: create sites from templates, deploy folders or GitHub repositories to name.webnak.site, change content, connect custom domains. Includes the Webnak MCP server and a skill for the workflow.",
-  "version": "0.1.4",
   "author": {
     "name": "Wolfigs",
     "url": "https://webnak.dev"
@@ -9,5 +10,12 @@
   "homepage": "https://webnak.dev",
   "repository": "https://github.com/wolfigs/webnak-cli",
   "license": "MIT",
-  "keywords": ["web hosting", "deploy", "website", "static site", "website editor", "mcp"]
+  "keywords": [
+    "web hosting",
+    "deploy",
+    "website",
+    "static site",
+    "website editor",
+    "mcp"
+  ]
 }

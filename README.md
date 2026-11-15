@@ -98,7 +98,7 @@ GitHub Actions:
 Add Webnak as an MCP server:
 
 ```sh
-claude mcp add webnak -- npx -y @wolfigs/webnak-cli mcp
+claude mcp add webnak -- npx -y @wolfigs/webnak-cli@latest mcp
 ```
 
 Or install the plugin, which adds the MCP server and a skill that teaches Claude
@@ -116,6 +116,29 @@ password.
 
 `webnak mcp` works with any MCP client over stdio.
 
+## What the Claude Code plugin runs, sends and stores
+
+The plugin adds one skill (`skills/webnak/SKILL.md`, instructions only) and one
+local MCP server. Everything it does goes through the Webnak CLI in this
+repository, whose Go source is in `cmd/` and `internal/`.
+
+- **Runs:** `npx -y @wolfigs/webnak-cli@<version> mcp`, pinned to an exact version in
+  `.mcp.json`. That npm package is the small wrapper in `npm/bin/webnak.js`. On
+  first use it downloads the matching `webnak` binary from this repository's GitHub
+  release (`github.com/wolfigs/webnak-cli/releases`), checks it against the
+  release's published SHA-256 checksums, caches it, and runs it. Each MCP tool runs
+  that binary with `--json --no-input`.
+- **Sends:** only to the Webnak API at `https://api.cloud.wolfigs.com`, operated by
+  Wolfigs, and only what the user asks for: their account details when signing in,
+  the files of a folder they deploy, the text they change, the domains they connect.
+  There is no telemetry and no other destination.
+- **Opens:** sign-in links on `https://cloud.wolfigs.com`, shown to the user to open
+  and approve. The plugin never sees or asks for a password.
+- **Stores:** one sign-in token in the user's config directory (see Security below),
+  readable only by them, and the downloaded binary in their cache directory.
+
+Webnak's privacy policy: https://webnak.dev/privacy
+
 ## Security
 
 - Tokens are stored in your user config directory, readable only by you
@@ -126,6 +149,16 @@ password.
 - The npm package downloads the binary for your platform from this repository's
   release and checks it against the published SHA-256 checksums. It runs no install
   scripts.
+
+## Releasing
+
+```sh
+scripts/bump.sh 0.1.6            # npm package, plugin and the MCP pin, together
+git commit -am "0.1.6" && git tag -a v0.1.6 -m v0.1.6 && git push --follow-tags
+```
+
+The release workflow builds every platform, publishes the GitHub release, updates
+`Formula/webnak.rb` and publishes `@wolfigs/webnak-cli` to npm.
 
 ## Build from source
 
