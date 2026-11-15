@@ -30,14 +30,19 @@ jobs:
       - name: GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/* --title "webnak $VERSION" --generate-notes
+        # Re-runnable: a release that already exists gets its files replaced.
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* --title "webnak $VERSION" --generate-notes \
+            || gh release upload "$GITHUB_REF_NAME" dist/* --clobber
       - name: Homebrew formula
         run: |
           scripts/formula.sh
           git config user.name "webnak-release"
           git config user.email "release@webnak.dev"
           git add Formula/webnak.rb
+          if git diff --cached --quiet; then echo "formula unchanged"; exit 0; fi
           git commit -m "Homebrew formula for v$VERSION"
+          git fetch origin main && git rebase origin/main
           git push origin HEAD:main
       - uses: actions/setup-node@v4
         with:
@@ -51,4 +56,5 @@ jobs:
         run: |
           cd npm
           npm version "$VERSION" --no-git-tag-version --allow-same-version
+          if npm view "$(node -p "require('./package.json').name")@$VERSION" version >/dev/null 2>&1; then echo "already on npm"; exit 0; fi
           npm publish --access public --provenance
