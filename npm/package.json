@@ -1,0 +1,14 @@
+{
+  "name": "webnak",
+  "version": "0.1.0",
+  "description": "Host and edit websites with Webnak from your terminal, or from AI agents like Claude Code (MCP server included).",
+  "keywords": ["webnak", "web hosting", "website", "static site", "deploy", "cli", "mcp", "claude", "claude-code", "website editor"],
+  "homepage": "https://webnak.dev",
+  "repository": { "type": "git", "url": "git+https://github.com/sathninduk/webnak-cli.git" },
+  "bugs": { "url": "https://github.com/sathninduk/webnak-cli/issues" },
+  "license": "MIT",
+  "author": "Wolfigs",
+  "bin": { "webnak": "bin/webnak.js" },
+  "files": ["bin/webnak.js", "README.md"],
+  "engines": { "node": ">=18" }
+}

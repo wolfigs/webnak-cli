@@ -1,0 +1,6 @@
+/dist/
+/webnak
+/webnak.exe
+npm/node_modules/
+.DS_Store
+.idea/

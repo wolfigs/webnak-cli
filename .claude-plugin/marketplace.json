@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "webnak",
+  "description": "Webnak: web hosting with a website editor built in.",
+  "owner": {
+    "name": "Wolfigs",
+    "url": "https://webnak.dev"
+  },
+  "plugins": [
+    {
+      "name": "webnak",
+      "description": "Host and edit websites with Webnak from Claude Code: templates, deploys, content edits, custom domains (MCP server + skill).",
+      "source": "./",
+      "category": "deployment",
+      "author": { "name": "Wolfigs" }
+    }
+  ]
+}
