@@ -42,7 +42,7 @@ For CI and agents, make a token once and set it as `WEBNAK_TOKEN`:
 webnak token create --name github-actions
 ```
 
-Every sign-in is a session you can see and revoke in Settings → Sessions
+Every sign-in is a session you can see and revoke in Settings → Connected apps
 (or `webnak account sessions`).
 
 ## Common tasks
