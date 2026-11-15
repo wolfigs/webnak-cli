@@ -1,4 +1,9 @@
-# webnak
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://webnak.dev/webnak/brand/webnak-logo-white.png">
+    <img alt="webnak" src="https://webnak.dev/webnak/brand/webnak-logo-black.png" height="44">
+  </picture>
+</h1>
 
 The command-line tool for [Webnak](https://webnak.dev): web hosting with a
 website editor built in. Put a site online from a template, a folder or a GitHub
