@@ -7,7 +7,7 @@ description: Put a website online and edit it with Webnak (web hosting with a we
 
 Webnak hosts websites at `<name>.webnak.site` (or the user's own domain) and lets
 anyone edit them by clicking. Use the Webnak MCP tools when they are available;
-otherwise run the `webnak` CLI (install: `npm i -g webnak`, or run `npx -y webnak`).
+otherwise run the `webnak` CLI (install: `npm i -g @webnak/cli`, or run `npx -y @webnak/cli`).
 Always pass `--json --no-input` to the CLI so it never waits on a prompt, and read
 its JSON output. Exit codes: 0 ok, 1 error, 2 usage, 3 not signed in, 4 not found.
 

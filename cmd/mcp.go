@@ -18,7 +18,7 @@ import (
 // webnak mcp: a Model Context Protocol server over stdio, so AI agents such as
 // Claude Code can use Webnak as tools:
 //
-//	claude mcp add webnak -- npx -y webnak mcp
+//	claude mcp add webnak -- npx -y @webnak/cli mcp
 //
 // Each tool runs this same CLI (with --json --no-input) and returns what it
 // prints, so the tools and the commands can never disagree.
@@ -200,10 +200,10 @@ var mcpTools = []mcpTool{
 func init() {
 	root.AddCommand(&cobra.Command{
 		Use:   "mcp",
-		Short: "Run as an MCP server for AI agents (Claude Code: claude mcp add webnak -- npx -y webnak mcp)",
+		Short: "Run as an MCP server for AI agents (Claude Code: claude mcp add webnak -- npx -y @webnak/cli mcp)",
 		Long: `Serve Webnak's actions as Model Context Protocol tools over stdio.
 
-Claude Code:   claude mcp add webnak -- npx -y webnak mcp
+Claude Code:   claude mcp add webnak -- npx -y @webnak/cli mcp
 Other clients: run "webnak mcp" as a stdio server.
 
 Sign in first with ` + "`webnak login`" + ` (or set WEBNAK_TOKEN in the server's environment).`,

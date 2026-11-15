@@ -1,6 +1,6 @@
 {
   "webnak": {
     "command": "npx",
-    "args": ["-y", "webnak@latest", "mcp"]
+    "args": ["-y", "@webnak/cli@latest", "mcp"]
   }
 }

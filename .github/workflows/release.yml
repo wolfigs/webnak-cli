@@ -1,5 +1,5 @@
 # Push a tag like v0.1.0 to release: binaries and checksums on the GitHub
-# release, the Homebrew formula in Formula/, and the npm package `webnak`
+# release, the Homebrew formula in Formula/, and the npm package `@webnak/cli`
 # (when the NPM_TOKEN secret is set).
 name: release
 on:

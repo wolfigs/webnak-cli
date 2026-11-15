@@ -6,16 +6,16 @@ repository, at `name.webnak.site` or your own domain, then change anything on it
 from your terminal, your CI, or an AI agent such as Claude Code.
 
 ```sh
-npx webnak login
-npx webnak create --template portfolio --name "Ana Lima"
-npx webnak deploy ./dist --create --name "My app"
+npx @webnak/cli login
+npx @webnak/cli create --template portfolio --name "Ana Lima"
+npx @webnak/cli deploy ./dist --create --name "My app"
 ```
 
 ## Install
 
 | | |
 |---|---|
-| npm (any OS) | `npm i -g webnak` or run with `npx webnak` |
+| npm (any OS) | `npm i -g @webnak/cli` or run with `npx @webnak/cli` |
 | macOS / Linux | `curl -fsSL https://raw.githubusercontent.com/sathninduk/webnak-cli/main/install.sh \| sh` |
 | Windows (PowerShell) | `irm https://raw.githubusercontent.com/sathninduk/webnak-cli/main/install.ps1 \| iex` |
 | Homebrew | `brew tap sathninduk/webnak https://github.com/sathninduk/webnak-cli && brew install webnak` |
@@ -88,7 +88,7 @@ GitHub Actions:
 
 ```yaml
 - run: npm run build
-- run: npx -y webnak deploy ./dist --site harbor --json
+- run: npx -y @webnak/cli deploy ./dist --site harbor --json
   env:
     WEBNAK_TOKEN: ${{ secrets.WEBNAK_TOKEN }}
 ```
@@ -98,7 +98,7 @@ GitHub Actions:
 Add Webnak as an MCP server:
 
 ```sh
-claude mcp add webnak -- npx -y webnak mcp
+claude mcp add webnak -- npx -y @webnak/cli mcp
 ```
 
 Or install the plugin, which adds the MCP server and a skill that teaches Claude
